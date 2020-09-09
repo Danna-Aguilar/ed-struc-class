@@ -1,15 +1,11 @@
 #include<iostream>
 //#include "Character.hh"
 #include "Hero.hh"
-
+//HEAP NO TIENE LIMITE
+//STACK SE USA EN FUNC O VAR
 int main()
 {
-
-    //Heap necesita la palabra new is se hace en la mamoria pero sin tener un limite como el stack
-    //El stack se usa cuando creas algo si new directamente en funciones o variables globales.
-
     //Hero* hero1{new Hero(5, 3, 1, 2, 3, 1, new std::string[4]{{"fire ball"}, {"fenix tail"}, {"war growl"}, {"fly"}})};
-
     Hero** heroList
     {
         new Hero*[4]
@@ -20,7 +16,7 @@ int main()
             new Hero(2, 3, 1, 2, 3, 1, new std::string[4]{{"fire ball"}, {"fly"}, {"fire ball"}, {"war growl"}})
         }
     };
-
+//errroorrrrrrr, q nos esperemos xd 
     for(int i{}; i < 4; i++)
     {
         //std::cout << "Health: " << (*heroList)->GetHealth() << std::endl;
